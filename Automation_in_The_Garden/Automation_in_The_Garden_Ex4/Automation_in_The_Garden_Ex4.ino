@@ -26,8 +26,9 @@ void loop()
        lcd_1.clear();  // resets the cursor to the top left corner and clears the display
        lcd_1.print("Humidity (%): "); // Prints what is inside the “ ” on the lcd
        lcd_1.print(Humidity); // Prints the humidity detected onto the LCD
+       delay(1000); // waits for 1 second
 
-       lcd_1.setCursor(0, 1);  // Moves cursor to the first column and second row
+       lcd_1.clear();  // resets the cursor to the top left corner and clears the display
        lcd_1.print("Temperature  (C): "); // Prints what is inside the “ ” on the lcd
        lcd_1.print(Temperature); // Prints the temperature detected onto the LCD
        delay(1000); // waits for 1 second
@@ -35,6 +36,7 @@ void loop()
        lcd_1.clear();  // resets the cursor to the top left corner and clears the display
        lcd_1.print("Moisture: "); // Measured from 0 to 1024 the higher the dryer(520:Dry soil/260:wet soil)
        lcd_1.print(soilMoisture); //Prints the detected value 
+       delay(1000); // waits for 1 second
      }
    }
 
