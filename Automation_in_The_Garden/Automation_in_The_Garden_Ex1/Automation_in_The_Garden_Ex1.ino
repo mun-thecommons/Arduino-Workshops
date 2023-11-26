@@ -1,9 +1,10 @@
-#include <Adafruit_LiquidCrystal.h> // This gives us access to additional commands
+#include <LiquidCrystal_I2C.h> // This gives us access to additional commands
 
-Adafruit_LiquidCrystal lcd_1(0);  // Starts up the additional commands and tells it where we plugged in the LCD
+LiquidCrystal_I2C lcd_1(0x27, 20, 4);   // Starts up the additional commands and tells it where we plugged in the LCD
 
 void setup() {  //  This section will run once
-  lcd_1.begin(16, 2);  // Starts the LCD
+  lcd_1.init(); // Starts the LCD
+  lcd_1.backlight(); // Turns on backlght for LCD
 }
 
 void loop() {  // Runs in a loop 
